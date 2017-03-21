@@ -43,6 +43,10 @@ filebeat.prospectors:
     - /var/log/*.log
     #- c:\programdata\elasticsearch\logs\*
 
+  multiline.pattern: '^\['
+  multiline.negate: true
+  multiline.match: after
+
   # Exclude lines. A list of regular expressions to match. It drops the lines that are
   # matching any regular expression from the list.
   #exclude_lines: ["^DBG"]
