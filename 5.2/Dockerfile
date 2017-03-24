@@ -21,5 +21,6 @@ RUN set -x && \
   apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 COPY docker-entrypoint.sh /
+COPY filebeat.yml /filebeat.yml
 ENTRYPOINT ["/docker-entrypoint.sh"]
-CMD [ "filebeat", "-e" ]
+CMD [ "filebeat", "-e"]
