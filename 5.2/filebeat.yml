@@ -40,7 +40,7 @@ filebeat.prospectors:
 
   # Paths that should be crawled and fetched. Glob based paths.
   paths:
-    - /var/log/*.log
+    - ${LOGSTASH_PATH}
     #- c:\programdata\elasticsearch\logs\*
 
   multiline.pattern: '^\['
